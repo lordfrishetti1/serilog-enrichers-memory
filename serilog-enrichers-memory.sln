@@ -1,19 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{037440DE-440B-4129-9F7A-09B42D00397E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{E9D1B5E1-DEB9-4A04-8BAB-24EC7240ADAF}"
 	ProjectSection(SolutionItems) = preProject
 		Build.ps1 = Build.ps1
-		NuGet.Config = NuGet.Config
 		README.md = README.md
 		assets\SerilogMemory.snk = assets\SerilogMemory.snk
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Enrichers.Memory", "src\Serilog.Enrichers.Memory\Serilog.Enrichers.Memory.csproj", "{2312A998-5E53-4355-9CB6-6014252B3E88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F1A28E03-3590-4F6F-B0D7-7D3008BCDF23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Enrichers.Memory.Tests", "tests\Serilog.Enrichers.Memory.Tests\Serilog.Enrichers.Memory.Tests.csproj", "{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5AD5AD8E-809B-4ADA-BEE6-45AF2CF23825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,11 +30,19 @@ Global
 		{2312A998-5E53-4355-9CB6-6014252B3E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2312A998-5E53-4355-9CB6-6014252B3E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2312A998-5E53-4355-9CB6-6014252B3E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2312A998-5E53-4355-9CB6-6014252B3E88} = {037440DE-440B-4129-9F7A-09B42D00397E}
+		{CC27194E-C8D2-4B1D-ACC5-28F9BDF49546} = {F1A28E03-3590-4F6F-B0D7-7D3008BCDF23}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF4B9AB9-DF05-417C-A8DE-CEBD1695A26B}
 	EndGlobalSection
 EndGlobal

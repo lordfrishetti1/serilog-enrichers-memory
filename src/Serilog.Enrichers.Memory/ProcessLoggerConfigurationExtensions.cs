@@ -17,24 +17,24 @@ using System;
 using Serilog.Configuration;
 using Serilog.Enrichers;
 
-namespace Serilog
+// ReSharper disable CheckNamespace
+namespace Serilog;
+// ReSharper restore CheckNamespace
+
+/// <summary>
+/// Extends <see cref="LoggerConfiguration"/> to add enrichers related to memory.
+/// capabilities.
+/// </summary>
+public static class ProcessLoggerConfigurationExtensions
 {
     /// <summary>
-    /// Extends <see cref="LoggerConfiguration"/> to add enrichers related to memory.
-    /// capabilities.
+    /// Enrich log events with memory usage/>.
     /// </summary>
-    public static class ProcessLoggerConfigurationExtensions
-    {
-        /// <summary>
-        /// Enrich log events with memory usage/>.
-        /// </summary>
-        /// <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
-        /// <returns>Configuration object allowing method chaining.</returns>
-        public static LoggerConfiguration WithMemoryUsage(
-           this LoggerEnrichmentConfiguration enrichmentConfiguration)
-        {
-            if (enrichmentConfiguration == null) throw new ArgumentNullException(nameof(enrichmentConfiguration));
-            return enrichmentConfiguration.With<MemoryUsageEnricher>();
-        }
-    }
+    /// <param name="enrichmentConfiguration">Logger enrichment configuration.</param>
+    /// <returns>Configuration object allowing method chaining.</returns>
+    public static LoggerConfiguration WithMemoryUsage(
+        this LoggerEnrichmentConfiguration enrichmentConfiguration) =>
+        enrichmentConfiguration == null
+            ? throw new ArgumentNullException(nameof(enrichmentConfiguration))
+            : enrichmentConfiguration.With<MemoryUsageEnricher>();
 }
